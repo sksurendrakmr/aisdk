@@ -154,3 +154,34 @@ AI SDK automatically includes some system tokens for formatting and context. (us
 - To build a proper conversational experience, we need to maintain an ordered history of all messages and include that history with every new prompt.
 
 The AI SDK makes it super simple.
+
+## Tailoring AI responses based on specific application needs.
+
+**Prompt Engineering**
+
+- Prompt engineering is the practice of crafting instructions to get better, more appropriate outputs from AI models.
+- It's not about changing the AI model itself. It's about guiding it to produce responses that fit our application perfectly.
+
+E.g. We have a brilliant chef who can cook anything
+
+- "make lunch" vs
+- "prepare a Thai red curry and sticky rice for someone who likes mild heat"
+
+**Why is Prompt Engineering important?**
+Good prmopt Engineering:
+
+- ensure responses match your users needs and knowledge level
+- creates consistency, so similar questions get similar types of responses
+- can actually reduce costs by encouraging more concise response that user fewer tokens
+
+With Good prompt, AI naturally responds in the right way for our applications.
+
+**Prompt Engineering Techniques**
+
+1. System Prompts
+
+   - They are special instructions that shape how the AI behaves throughout an entire conversation.
+     (System messages are like setting the rules of the board games before anyone play. It sent the
+     context of the entire conversation but user never sees it)
+
+   - Trade off - The System prompt is send with every single request, adding to the token counts.
