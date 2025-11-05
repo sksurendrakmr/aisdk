@@ -198,3 +198,19 @@ With Good prompt, AI naturally responds in the right way for our applications.
 - monitor costs
 - test edge cases
 - document what works
+
+## Structured Data
+
+- When we are building frontend of an application, we often need data in a specific format.
+- If we are building a recipe app, we don't want the AI to just write paragraphs about cooking.
+- We need ingredients as an array, steps in order, cooking time as numbers.
+- If we are building a task management app, we need tasks with specific properties like title, priorty and due date etc.
+
+- We could try to parse the AI's text response and extract the data yourself.
+- That's messy and error-prone because what if the AI format things differently each time?
+
+**Structured Data Generation**
+
+- We can tell the AI exactly what shape we want the response in, and it will give us back proper objects and array we can directly in our code.
+
+- For this, we will ZOD to define what structure we want.
