@@ -214,3 +214,28 @@ With Good prompt, AI naturally responds in the right way for our applications.
 - We can tell the AI exactly what shape we want the response in, and it will give us back proper objects and array we can directly in our code.
 
 - For this, we will ZOD to define what structure we want.
+
+## Tools
+
+> [!WARNING]
+> LLMs have been trained on a dataset with a cutoff point and don't have access to the outside world.
+
+This is where tools come in.
+**Tools are actions that the AI can invoke**
+
+They are special functions we give to the AI to perform specific tasks that go beyond their training data.
+
+When the AI recognizes it needs information it doesn't have, it can call these tools.
+
+The LLM itself doesn't execute the function.
+Instead, it identifies which tool to use, figures out what parameters to pass, and returns this information in a structured format.
+
+The application then runs the actual function and gives the result back to the AI to be considered in the next step of the response.
+
+The beauty is that users can interact with complex systems using natural language while the AI handles all the orchestration.
+
+- We ask in plain English
+- the AI figures out which tool to use
+- calls it with the right parameters
+- gets the result
+- gives us a natural response.
