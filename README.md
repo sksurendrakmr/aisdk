@@ -142,3 +142,15 @@ AI SDK automatically includes some system tokens for formatting and context. (us
 
 > [!NOTE]
 > Token is the currency of AI. Every requests cost token and tokens cost money.
+
+## Completions With AI
+
+- Each prompt is treated as a competely independent request.
+- Kind of browsing the web in incognito mode.
+- The AI starts fresh every time, with zero memory of our last message.
+
+**Chat with AI**
+
+- To build a proper conversational experience, we need to maintain an ordered history of all messages and include that history with every new prompt.
+
+The AI SDK makes it super simple.
