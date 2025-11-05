@@ -185,3 +185,16 @@ With Good prompt, AI naturally responds in the right way for our applications.
      context of the entire conversation but user never sees it)
 
    - Trade off - The System prompt is send with every single request, adding to the token counts.
+
+2. Few-shot learning
+   - Sometimes telling the AI what to do isn't enough.
+   - It's helpful to get the response in a specific format.
+
+**Prompt engineering best practices**
+
+- Start simple and iterate
+- be specific but not overly restrictive
+- consider your audience
+- monitor costs
+- test edge cases
+- document what works
