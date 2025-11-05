@@ -92,3 +92,53 @@ A really smart assistent who has read millions of books and can now help us writ
 - If models are cars, providers are the manufacturers.
 - Companies like OpenAI, Anthropic, Google etc are like Ford, BMW and Mercedes of the AI world.
 - Each providers invests hundreds or millions in research, has their own approach and offers different strengths.
+
+## Tokens
+
+> [!IMPORTANT]
+> Understanding Tokens is crucial for building cost effective AI applications.
+
+A token is the basic unit of text that the model processes.
+
+They can be whole words, parts of words, individual characters, or even punctuation marks.
+
+Depending on the context and the model we are using, the same word might be tokenized differently.
+
+Token is a chunk of text with no specific length.
+Approximate, 1 token equals about 4 characters in english text.
+
+**Why Token Matters?**
+They directly impact the application in three different ways.
+
+- How much text we can process at once.(Every Model has a maximum token limit and if we hit that limit we can't process any other text.)
+- How much the API calls will cost.
+- The quality of the results. (If we send too many tokens, we might overwhelm the model with information and the model might not have enough context to a good response)
+
+**Context Window**
+
+- Every Model has a context window which represents how much information a model can proces in a single conversation (short-term memory)
+
+_GPT-4.1-nano can handle upto 1 million tokens in a single conversation_
+
+1 million tokens are roughly 2500 to 3000 pages of text. That's equivalent to feeding the entire Lord of the Rings trilogy to the model at once.
+
+> [!IMPORTANT]
+> When we hit that limit, older information starts getting pushed out to make room for new stuff.
+
+Imagine the model's memory as a whiteboard: as we keep writing, we eventually run out of space, so we have to erase the oldest notes to add new ones.
+
+**Input vs Output tokens**
+
+- Input tokens are everything we send to the model.
+- Output tokens are everything the model generates in response.
+
+Why does this distinction matters?
+
+- Different models have different input/output token limits.
+- Input and output tokens often have different pricing.
+- Understanding this helps us optimize the API costs.
+
+AI SDK automatically includes some system tokens for formatting and context. (useful for cost optimization)
+
+> [!NOTE]
+> Token is the currency of AI. Every requests cost token and tokens cost money.
