@@ -1,12 +1,13 @@
 "use client";
 
+import { ChatMessage } from "@/app/api/tools/route";
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
 import { useState } from "react";
 
 export default function ToolPage() {
   const [input, setInput] = useState("");
-  const { messages, sendMessage, status, error, stop } = useChat({
+  const { messages, sendMessage, status, error, stop } = useChat<ChatMessage>({
     transport: new DefaultChatTransport({
       api: "/api/tools",
     }),
@@ -27,6 +28,12 @@ export default function ToolPage() {
             switch (parts.type) {
               case "text":
                 return <div key={`${message.id} - ${index}`}>{parts.text}</div>;
+              case "tool-getWeather":
+                switch (parts.state) {
+                  case "input-streaming":
+                    return <div>Receiving weather request...</div>;
+                }
+                return null;
               default:
                 return null;
             }

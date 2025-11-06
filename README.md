@@ -239,3 +239,10 @@ The beauty is that users can interact with complex systems using natural languag
 - calls it with the right parameters
 - gets the result
 - gives us a natural response.
+
+## Multi-step Tool calls
+
+What if User's question requires more than one tool to answer?
+
+- This requires calling multiple tools in sequence, with the output of one tool becomign the input for another.
+- **Multip-step tool calling** - AI can chain tools together to solve complex problems.
